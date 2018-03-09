@@ -15,13 +15,12 @@ Platform:
 
 npm manifest: 
   {
-    "name": "trainings2",
+    "name": "webpack-project",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "build": "webpack --config webpack.config.js",
+       "build": "webpack --config webpack.config.js",
       "watch": "webpack --watch"
     },
     "author": "Pavel K <pavel.k.bz@yandex.ru>",
@@ -6057,10 +6056,10 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 2
+  Exit code: 1
   Command: sh
   Arguments: -c webpack --config webpack.config.js
-  Directory: /Volumes/Transcend/Облако/Проекты/trainings2
+  Directory: /Volumes/Transcend/Облако/Проекты/webpack-project
   Output:
   
       at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)

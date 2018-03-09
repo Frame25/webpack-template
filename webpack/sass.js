@@ -1,3 +1,5 @@
+ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = () => {
   return {
     test: /\.scss$/,
