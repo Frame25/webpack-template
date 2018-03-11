@@ -34,6 +34,20 @@ To watch files and bundle use command:
 npm run watch
 ```
 
+## Branches
+
+There are several versions: 
+1. The very simple project witout any framework, only Vue
+to call: 
+```
+git checkout master
+```
+2. With framework [Bootstrap-Vue](https://bootstrap-vue.js.org/docs/), that gives us all Bootstrap styles and components made on Vue, not on jQuery
+to call: 
+```
+git checkout bootstrap-vue
+```
+
 ## Notes
 
 Today (9.04.18) there some troubles with `webpack@^4.0.0`, so installed v.3.6.0, 

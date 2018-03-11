@@ -8,7 +8,8 @@ cssConfig = require('./webpack/css.js'),
 sassConfig = require('./webpack/sass.js'),
 vueConfig = require('./webpack/vue.js'),
 pugConfig = require('./webpack/pug.js'),
-imgConfig = require('./webpack/img.js');
+imgConfig = require('./webpack/img.js'),
+fontsConfig = require('./webpack/fonts.js');
 
 const extractSass = new ExtractTextPlugin({
   filename: "css/[name].css"
@@ -25,7 +26,7 @@ module.exports = {
     filename: 'js/[name].js'
   },
   module: {
-    rules: [ jsConfig(), cssConfig(), sassConfig(), vueConfig(), pugConfig(), imgConfig() ]
+    rules: [ jsConfig(), cssConfig(), sassConfig(), vueConfig(), pugConfig(), fontsConfig(), imgConfig() ]
   },
   plugins: [
       new htmlPlugin({
