@@ -37,13 +37,13 @@ npm run watch
 ## Branches
 
 There are several versions: 
-1. The very simple project witout any framework, only Vue
-to call: 
+1. The very simple project witout any framework, only Vue.
+To call: 
 ```
 git checkout master
 ```
-2. With framework [Bootstrap-Vue](https://bootstrap-vue.js.org/docs/), that gives us all Bootstrap styles and components made on Vue, not on jQuery
-to call: 
+2. With framework [Bootstrap-Vue](https://bootstrap-vue.js.org/docs/), that gives us all Bootstrap styles and components made on Vue, not on jQuery.
+To call: 
 ```
 git checkout bootstrap-vue
 ```
