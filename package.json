@@ -4,16 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-     "build": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.js",
     "watch": "webpack --watch"
   },
   "author": "Pavel K <pavel.k.bz@yandex.ru>",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^8.2.0",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.3",
     "bootstrap-vue": "^2.0.0-rc.2",
+    "csscomb-loader": "^0.0.2",
+    "postcss-loader": "^2.1.3",
     "pug": "^2.0.1",
     "sass": "^1.0.0-beta.5.2",
     "webpack": "3.6.0"

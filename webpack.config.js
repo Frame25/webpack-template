@@ -1,7 +1,8 @@
 const path = require('path'),
 htmlPlugin = require('html-webpack-plugin'),
 merge = require('webpack-merge'),
-ExtractTextPlugin = require("extract-text-webpack-plugin");
+ExtractTextPlugin = require("extract-text-webpack-plugin"),
+autoprefixer = require('autoprefixer');
 
 const jsConfig = require('./webpack/js.js'),
 cssConfig = require('./webpack/css.js'),
@@ -10,6 +11,7 @@ vueConfig = require('./webpack/vue.js'),
 pugConfig = require('./webpack/pug.js'),
 imgConfig = require('./webpack/img.js'),
 fontsConfig = require('./webpack/fonts.js');
+
 
 const extractSass = new ExtractTextPlugin({
   filename: "css/[name].css"
