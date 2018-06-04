@@ -1,27 +1,22 @@
-const path = require('path'),
-htmlPlugin = require('html-webpack-plugin'),
-merge = require('webpack-merge'),
-ExtractTextPlugin = require("extract-text-webpack-plugin"),
-autoprefixer = require('autoprefixer');
+const path = require('path')
+const HtmlPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-const jsConfig = require('./webpack/js.js'),
-cssConfig = require('./webpack/css.js'),
-sassConfig = require('./webpack/sass.js'),
-vueConfig = require('./webpack/vue.js'),
-pugConfig = require('./webpack/pug.js'),
-imgConfig = require('./webpack/img.js'),
-fontsConfig = require('./webpack/fonts.js');
-
+const jsConfig = require('./webpack/js.js')
+const cssConfig = require('./webpack/css.js')
+const sassConfig = require('./webpack/sass.js')
+const vueConfig = require('./webpack/vue.js')
+const pugConfig = require('./webpack/pug.js')
+const imgConfig = require('./webpack/img.js')
+const fontsConfig = require('./webpack/fonts.js')
 
 const extractSass = new ExtractTextPlugin({
-  filename: "css/[name].css"
-});
-
+  filename: 'css/[name].css'
+})
 
 module.exports = {
   entry: {
-    index: './src/pages/index/index.js',
-    second: './src/pages/second/second.js'
+    index: './src/pages/index/index.js'
   },
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -31,24 +26,18 @@ module.exports = {
     rules: [ jsConfig(), cssConfig(), sassConfig(), vueConfig(), pugConfig(), fontsConfig(), imgConfig() ]
   },
   plugins: [
-      new htmlPlugin({
-        title: 'index',
-        filename: 'index.html',
-        template: './src/pages/index/index.pug',
-        chunks: ['index']
-      }),
-      new htmlPlugin({
-        title: 'seccond',
-        filename: 'second/index.html',
-        template: './src/pages/second/second.pug',
-        chunks: ['second']
-      }),
-      extractSass
+    new HtmlPlugin({
+      title: 'index',
+      filename: 'index.html',
+      template: './src/pages/index/index.pug',
+      chunks: ['index']
+    }),
+    extractSass
   ],
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     },
     extensions: ['*', '.js', '.vue', '.json']
-  },
+  }
 }
