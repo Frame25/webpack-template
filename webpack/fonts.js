@@ -1,6 +1,6 @@
 module.exports = () => {
-  return { 
-    test: /\.(woff|woff2|eot|ttf)$/, 
+  return {
+    test: /\.(woff|woff2|eot|ttf)$/,
     use: [
       {
         loader: 'file-loader',
@@ -10,7 +10,7 @@ module.exports = () => {
           outputPath: 'fonts/',
           publicPath: '../fonts/'
         }
-      } 
+      }
     ]
   }
 }

@@ -6,12 +6,12 @@ const {
 
 const {
   jsConfig = require('./webpack/js.js'),
-  cssConfig = require('./webpack/css.js'),
-  sassConfig = require('./webpack/sass.js'),
+  stylesConfig = require('./webpack/styles.js'),
   vueConfig = require('./webpack/vue.js'),
   pugConfig = require('./webpack/pug.js'),
   imgConfig = require('./webpack/img.js'),
-  fontsConfig = require('./webpack/fonts.js')
+  fontsConfig = require('./webpack/fonts.js'),
+  CopyWebpackPlugin = require('copy-webpack-plugin')
 } = {}
 
 const extractSass = new ExtractTextPlugin({
@@ -30,7 +30,7 @@ const jsBundle = {
 
 const configs = {
   module: {
-    rules: [ jsConfig(), cssConfig(), sassConfig(), vueConfig(), pugConfig(), fontsConfig(), imgConfig() ]
+    rules: [ jsConfig(), stylesConfig(), vueConfig(), pugConfig(), fontsConfig(), imgConfig() ]
   }
 }
 
@@ -42,7 +42,13 @@ const plugins = {
       template: './src/pages/index/index.pug',
       chunks: ['index']
     }),
-    extractSass
+    extractSass,
+    new CopyWebpackPlugin([
+      {
+        from: path.join(__dirname, 'static/**/*'),
+        to: 'build'
+      }
+    ])
   ]
 }
 
