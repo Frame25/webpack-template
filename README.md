@@ -64,7 +64,11 @@ to call:
 ```
 git checkout bootstrap-vue
 ```
-
+3. The very simple project with React
+to call:
+```
+git checkout react
+```
 
 ## Notes
 
