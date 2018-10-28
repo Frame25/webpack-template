@@ -7,13 +7,12 @@ class Page extends React.Component {
       title: 'This is React Component'
     }
 
-    this.setNewTitle = this.setNewTitle.bind(this)
-  }
-
-  setNewTitle (event) {
-    this.setState({
-      title: event.target.value || 'This is React Component'
-    })
+    // this.setNewTitle = this.setNewTitle.bind(this)
+    this.setNewTitle = (event) => {
+      this.setState({
+        title: event.target.value || 'This is React Component'
+      })
+    }
   }
 
   render () {
