@@ -52,12 +52,12 @@ const plugins = {
   ]
 }
 
-const vueResolve = {
+const resolve = {
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     },
-    extensions: ['*', '.js', '.vue', '.json']
+    extensions: ['*', '.js', '.jsx', '.vue', '.json']
   }
 }
 
@@ -65,7 +65,7 @@ const build = {
   ...jsBundle,
   ...configs,
   ...plugins,
-  ...vueResolve
+  ...resolve
 }
 
 const dev = {

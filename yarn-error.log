@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn run build
+  /usr/local/bin/node /usr/local/bin/yarn run dev
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mongodb/bin:/usr/local/mongodb/bin
@@ -21,7 +21,8 @@ npm manifest:
     "main": "index.js",
     "scripts": {
       "build": "webpack --config webpack.config.js",
-      "watch": "webpack --watch"
+      "watch": "webpack --watch",
+      "dev": "webpack-dev-server --env dev --mode=development"
     },
     "author": "Pavel K <pavel.k.bz@yandex.ru>",
     "license": "ISC",
@@ -35,6 +36,8 @@ npm manifest:
       "postcss-loader": "^3.0.0",
       "postcss-sorting": "^4.0.0",
       "pug": "^2.0.1",
+      "react": "^16.6.0",
+      "react-dom": "^16.6.0",
       "sass": "^1.0.0-beta.5.2",
       "webpack": "4.21.0"
     },
@@ -6442,7 +6445,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c webpack --config webpack.config.js
+  Arguments: -c webpack-dev-server --env dev --mode=development
   Directory: /Users/pavel_k/Pavel_K/Проекты/webpack-project
   Output:
   
