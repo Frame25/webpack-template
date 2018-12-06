@@ -14,9 +14,8 @@ export default {
 }
 </script>
 
-<style>
-.component {
-  color: green;
-  text-align: center;
-}
+<style lang="sass">
+.component
+  color: green
+  text-align: center
 </style>

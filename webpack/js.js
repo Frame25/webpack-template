@@ -1,10 +1,8 @@
 module.exports = () => {
   return {
-    test: /\.js$/,
+    test: /\.(js|jsx)$/,
     loader: 'babel-loader',
-    include: /src/,
-    query: {
-      presets: ['es2015']
-    }
+    exclude: /node_modules/,
+    include: /src/
   }
 }
