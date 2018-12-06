@@ -8,11 +8,12 @@ class Page extends React.Component {
     }
 
     // this.setNewTitle = this.setNewTitle.bind(this)
-    this.setNewTitle = (event) => {
-      this.setState({
-        title: event.target.value || 'This is React Component'
-      })
-    }
+  }
+
+  setNewTitle (event) {
+    this.setState({
+      title: event.target.value || 'This is React Component'
+    })
   }
 
   render () {
@@ -21,9 +22,11 @@ class Page extends React.Component {
         <h1>{ this.state.title }</h1>
         <div className="desc">{this.props.description}</div>
 
+        <p>title is default: {this.state.title === 'This is React Component' ? 'true' : 'false'}</p>
+
         <label className="test-input">
           <h2>Type new title</h2>
-          <input type="text" onInput={this.setNewTitle} />
+          <input type="text" onInput={this.setNewTitle.bind(this)} />
         </label>
       </div>
     )
