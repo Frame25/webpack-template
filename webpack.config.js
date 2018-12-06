@@ -3,7 +3,6 @@ const {
   path = require('path'),
   HtmlPlugin = require('html-webpack-plugin'),
   MiniCssExtractPlugin = require('mini-css-extract-plugin'),
-
 } = {}
 
 const {
