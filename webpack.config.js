@@ -2,9 +2,7 @@ const {
   version = '1.0.0',
   path = require('path'),
   HtmlPlugin = require('html-webpack-plugin'),
-  // ExtractTextPlugin = require('extract-text-webpack-plugin')
   MiniCssExtractPlugin = require('mini-css-extract-plugin'),
-  OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 } = {}
 
