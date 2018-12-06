@@ -1,11 +1,11 @@
 module.exports = () => {
   return {
-    test: /\.(js|jsx)?$/,
+    test: /\.(js|jsx)$/,
     loader: 'babel-loader',
+    exclude: /node_modules/,
     include: /src/,
-    exclude: '/node_modules/',
-    query: {
-      presets: ['es2015', 'react']
+    options: {
+      presets: ['@babel/preset-env']
     }
   }
 }

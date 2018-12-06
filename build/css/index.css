@@ -1,5 +1,1 @@
-h1 {
-  text-align: center;
-  color: blue;
-  font-size: 3rem;
-  margin-top: 30%; }
+h1{color:#00f;font-size:3rem;margin-top:10%}.desc,.test-input,h1,p{text-align:center}.test-input{display:block;margin-top:60px}.test-input input{border:1px solid teal;padding:10px;width:300px;border-radius:2px}
