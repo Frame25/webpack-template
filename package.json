@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "watch": "webpack --watch",
-    "dev": "webpack-dev-server --env dev --mode=development"
+    "build": "webpack --env prod",
+    "watch": "webpack --watch --env dev",
+    "dev": "webpack-dev-server --env dev"
   },
   "author": "Pavel K <pavel.k.bz@yandex.ru>",
   "license": "ISC",
@@ -26,6 +26,7 @@
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^1.0.1",
     "csscomb-loader": "^0.0.2",
+    "cssnano": "^4.1.7",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-standard": "^12.0.0",
@@ -33,7 +34,6 @@
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^2.0.0",
     "html-webpack-plugin": "^4.0.0-beta.4",
     "mini-css-extract-plugin": "^0.4.5",

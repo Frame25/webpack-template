@@ -1,7 +1,11 @@
 const {
+  version = '1.0.0',
   path = require('path'),
   HtmlPlugin = require('html-webpack-plugin'),
-  ExtractTextPlugin = require('extract-text-webpack-plugin')
+  // ExtractTextPlugin = require('extract-text-webpack-plugin')
+  MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+  OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+
 } = {}
 
 const {
@@ -14,8 +18,8 @@ const {
   CopyWebpackPlugin = require('copy-webpack-plugin')
 } = {}
 
-const extractSass = new ExtractTextPlugin({
-  filename: 'css/[name].css'
+const extractCss = new MiniCssExtractPlugin({
+  filename: 'css/[name].css?' + version
 })
 
 const jsBundle = {
@@ -24,7 +28,7 @@ const jsBundle = {
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'js/[name].js'
+    filename: 'js/[name].js?' + version
   }
 }
 
@@ -42,7 +46,7 @@ const plugins = {
       template: './src/pages/index/index.pug',
       chunks: ['index']
     }),
-    extractSass,
+    extractCss,
     new CopyWebpackPlugin([
       {
         from: path.join(__dirname, 'static/**/*'),
@@ -61,15 +65,19 @@ const vueResolve = {
   }
 }
 
-const build = {
+const common = {
   ...jsBundle,
   ...configs,
   ...plugins,
   ...vueResolve
 }
 
+const build = {
+  ...common
+}
+
 const dev = {
-  ...build,
+  ...common,
   devServer: {
     contentBase: path.join(__dirname, 'build'),
     compress: true,
