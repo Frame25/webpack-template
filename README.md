@@ -14,46 +14,46 @@ Webpack module rules are exported into particular files at `./webpack/`.
 
 
 1. clone file architecture of branch "master" into your projects dir and set your project name
-```
+```shell
 git clone https://github.com/Frame25/webpack-template.git <your_project_name>
 ```
 
 1.1 if you want some other branch do this:
-```
+```shell
 git clone -b <branch-name> https://github.com/Frame25/webpack-template.git <your_project_name>
 ```
 
 2. get into your project directory
-```
+```shell
 cd <your_project_name>
 ```
 
 3. remove current .git directory to unlink with this project
-```
+```shell
 rm -rf .git
 ```
 
 4. init new empty git directory
-```
+```shell
 git init
 ```
 
 4.1 link to your remote repository if you want
-```
+```shell
 git remote set-url origin https://github.com/your_name/your_repo.git
 ```
 
 5. install packages
-```
+```shell
 npm i
 ```
 
 To build your files use command:
-```
+```shell
 npm run build
 ```
 To watch files and bundle use command: 
-```
+```shell
 npm run watch
 ```
 
@@ -62,16 +62,16 @@ npm run watch
 There are several versions: 
 1. The very simple project without any framework
 to call: 
-```
-git checkout master
+```shell
+git clone https://github.com/Frame25/webpack-template.git <your_project_name>
 ```
 2. The very simple project with Vue
 to call: 
-```
-git checkout vue
+```shell
+git clone -b vue https://github.com/Frame25/webpack-template.git <your_project_name>
 ```
 3. The very simple project with React
 to call:
-```
-git checkout react
+```shell
+git clone -b react https://github.com/Frame25/webpack-template.git <your_project_name>
 ```
