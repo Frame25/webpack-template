@@ -40,7 +40,7 @@ git init
 
 4.1 link to your remote repository if you want
 ```shell
-git remote set-url origin https://github.com/your_name/your_repo.git
+git remote add origin git@github.com:your_name/your_repo.git
 ```
 
 5. install packages
