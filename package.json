@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --env prod",
-    "watch": "webpack --watch --env dev",
-    "dev": "webpack-dev-server --env dev"
+    "build": "webpack --env prod --mode production",
+    "watch": "webpack --watch --env dev --mode development",
+    "dev": "webpack-dev-server --env dev --mode development"
   },
   "author": "Pavel K <pavel.k.bz@yandex.ru>",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "autoprefixer": "^9.4.2",
     "babel-cli": "^6.26.0",
     "babel-loader": "8.0.4",
+    "babel-plugin-transform-react-pug": "^7.0.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-minify": "^0.5.0",
     "copy-webpack-plugin": "^4.6.0",
@@ -43,8 +44,12 @@
     "node-sass": "^4.10.0",
     "postcss-loader": "^3.0.0",
     "postcss-sorting": "^4.0.1",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
   }
 }

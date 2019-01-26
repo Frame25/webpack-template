@@ -10,6 +10,7 @@ const {
   stylesConfig = require('./webpack-modules/styles.js'),
   vueConfig = require('./webpack-modules/vue.js'),
   imgConfig = require('./webpack-modules/img.js'),
+  pugConfig = require('./webpack-modules/pug.js'),
   fontsConfig = require('./webpack-modules/fonts.js'),
   CopyWebpackPlugin = require('copy-webpack-plugin')
 } = {}
@@ -30,7 +31,7 @@ const jsBundle = {
 
 const configs = {
   module: {
-    rules: [ jsConfig(), stylesConfig(), vueConfig(), fontsConfig(), imgConfig() ]
+    rules: [ jsConfig(), stylesConfig(), vueConfig(), pugConfig(), fontsConfig(), imgConfig() ]
   }
 }
 
