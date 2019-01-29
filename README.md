@@ -1,4 +1,6 @@
 # webpack-template
+I made it for myself, but if you want...
+
 This is a simple webpack project template. To fast init.
 
 If one wants to start new project and don`t want to spend time for writing config, 
