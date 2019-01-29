@@ -75,3 +75,8 @@ to call:
 ```shell
 git clone -b react https://github.com/Frame25/webpack-template.git <your_project_name>
 ```
+4. The very simple project with React & React-Pug
+to call:
+```shell
+git clone -b react-pug https://github.com/Frame25/webpack-template.git <your_project_name>
+```
