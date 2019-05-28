@@ -18,7 +18,7 @@ var deleteFolderRecursive = function(path) {
 deleteFolderRecursive('.git');
 deleteFolderRecursive('.vscode');
 
-['yarn-error.log', 'yarn.lock', 'init.js'].forEach(function(file){
+['yarn-error.log', 'yarn.lock', 'init.js', 'package-lock.json'].forEach(function(file){
   fs.unlink(file, function(err) { if (err) console.log('can not remove ' + file) });
 });
 
@@ -30,4 +30,4 @@ fs.writeFileSync('package.json', JSON.stringify(p, null, 2), 'utf-8');
 exec('npm i');
 exec('git init');
 
-console.log('Enjoy coding!')
+console.log('Wait for the process to finish... \nAnd enjoy coding!')
