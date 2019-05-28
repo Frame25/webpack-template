@@ -30,25 +30,11 @@ git clone -b <branch-name> https://github.com/Frame25/webpack-template.git <your
 cd <your_project_name>
 ```
 
-3. remove current .git directory to unlink with this project
+3. run the init script, to prepare for work
 ```shell
-rm -rf .git
+npm run init
 ```
 
-4. init new empty git directory
-```shell
-git init
-```
-
-4.1 link to your remote repository if you want
-```shell
-git remote add origin git@github.com:your_name/your_repo.git
-```
-
-5. install packages
-```shell
-npm i
-```
 
 To build your files use command:
 ```shell

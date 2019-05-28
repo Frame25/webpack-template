@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --env prod --mode production",
     "watch": "webpack --watch --env dev --mode development",
-    "dev": "webpack-dev-server --env dev --mode development"
+    "dev": "webpack-dev-server --env dev --mode development",
+    "init": "node init.js || \"Error: NodeJS is not installed or no file - init.js\""
   },
   "author": "Pavel K <pavel.k.bz@yandex.ru>",
   "license": "ISC",
