@@ -1,6 +1,24 @@
 var fs = require('fs');
 var exec = require('child_process').exec;
-['.git', '.vscode', 'yarn-error.log', 'yarn.lock', 'init.js'].forEach(function(file){
+
+var deleteFolderRecursive = function(path) {
+  if (fs.existsSync(path)) {
+    fs.readdirSync(path).forEach(function(file, index){
+      var curPath = path + "/" + file;
+      if (fs.lstatSync(curPath).isDirectory()) { // recurse
+        deleteFolderRecursive(curPath);
+      } else { // delete file
+        fs.unlinkSync(curPath);
+      }
+    });
+    fs.rmdirSync(path);
+  }
+};
+
+deleteFolderRecursive('.git');
+deleteFolderRecursive('.vscode');
+
+['yarn-error.log', 'yarn.lock', 'init.js'].forEach(function(file){
   fs.unlink(file, function(err) { if (err) console.log('can not remove ' + file) });
 });
 
