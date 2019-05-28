@@ -189,12 +189,10 @@ module.exports = env => {
       },
       extensions: ['*', '.js', '.vue', '.json']
     }, */
-    devServer: (env => {
-      return env === 'development' ? {
-        contentBase: path.join(__dirname, 'build'),
-        compress: true,
-        port: 9000
-      } : {}
-    })(env)
+    devServer: {
+      contentBase: path.join(__dirname, 'build'),
+      compress: true,
+      port: 9000
+    }
   }
 }
