@@ -165,12 +165,10 @@ module.exports = env => {
     },
 
     //-----------------MODULES---------------------//
-    devServer: (env => {
-      return env === 'development' ? {
-        contentBase: path.join(__dirname, 'build'),
-        compress: true,
-        port: 9000
-      } : {}
-    })(env)
+    devServer: {
+      contentBase: path.join(__dirname, 'build'),
+      compress: true,
+      port: 9000
+    }
   }
 }
