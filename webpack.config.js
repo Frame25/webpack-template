@@ -2,7 +2,6 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
-const sorting = require('postcss-sorting');
 const webpack = require('webpack');
 // const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlPlugin = require('html-webpack-plugin');
@@ -55,10 +54,7 @@ module.exports = env => {
                   require('cssnano')({
                     preset: 'default'
                   }),
-                  sorting(),
-                  autoprefixer({
-                    browsers: ['ie >= 8', 'last 4 version']
-                  })
+                  autoprefixer()
                 ],
                 sourceMap: true
               }
@@ -91,10 +87,7 @@ module.exports = env => {
                   require('cssnano')({
                     preset: 'default'
                   }),
-                  sorting(),
-                  autoprefixer({
-                    browsers: ['ie >= 8', 'last 4 version']
-                  })
+                  autoprefixer()
                 ],
                 sourceMap: true
               }
