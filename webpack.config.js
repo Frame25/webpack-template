@@ -55,10 +55,7 @@ module.exports = env => {
                   require('cssnano')({
                     preset: 'default'
                   }),
-                  sorting(),
-                  autoprefixer({
-                    browsers: ['ie >= 8', 'last 4 version']
-                  })
+                  autoprefixer()
                 ],
                 sourceMap: true
               }
@@ -91,10 +88,7 @@ module.exports = env => {
                   require('cssnano')({
                     preset: 'default'
                   }),
-                  sorting(),
-                  autoprefixer({
-                    browsers: ['ie >= 8', 'last 4 version']
-                  })
+                  autoprefixer()
                 ],
                 sourceMap: true
               }
