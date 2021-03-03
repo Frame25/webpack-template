@@ -16,7 +16,7 @@
     "@babel/preset-env": "^7.2.0",
     "browserslist": "^4.6.1",
     "caniuse-lite": "^1.0.30000974",
-    "pug": "^2.0.1",
+    "pug": "^3.0.1",
     "sass": "^1.15.1",
     "vue": "^2.6.7",
     "webpack": "4.27.1"
